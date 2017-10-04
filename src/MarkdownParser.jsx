@@ -14,13 +14,16 @@ class MarkdownParser extends Component {
     }
 
     async componentDidMount() {
-        try {
-            const response = await fetch(CMS_URL + this.props.url);
-            const text = await response.text();
-            this.setState({ fetchedMarkdown: text });
-        } catch (e) {
-            console.error(e);
-            this.setState({ error: e });
+        if (this.props.url) {
+            try {
+                const response = await fetch(CMS_URL + this.props.url);
+                const text = await response.text();
+                this.setState({ fetchedMarkdown: text });
+            } catch (e) {
+                this.setState({ error: e });
+            }
+        } else {
+            this.setState({ error: 'No url given' });
         }
     }
 
@@ -30,17 +33,18 @@ class MarkdownParser extends Component {
 
     render() {
         if (this.state.error) {
-            return <div className={this.props.classNameProp}>Oops, see console for what went wrong!</div>;
+            console.error(this.state.error);
+            return <div className={this.props.className}>Oops, see console for what went wrong!</div>;
         }
 
         if (!this.state.fetchedMarkdown) {
-            return <div className={this.props.classNameProp}>Fetching content...</div>;
+            return <div className={this.props.className}>Fetching content...</div>;
         }
 
         return (
             <div
                 dangerouslySetInnerHTML={this.parseMarkdown()}
-                className={this.props.classNameProp}
+                className={this.props.className}
                 style={this.props.style}
             />
         );
@@ -48,7 +52,7 @@ class MarkdownParser extends Component {
 }
 
 MarkdownParser.propTypes = {
-    classNameProp: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
 };
 
