@@ -1,0 +1,59 @@
+/* Styles for Filler */
+.Filler {
+    $einstein-large: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/large/einstein-large.png');
+    $einstein-tablet: url();
+    $adams-large: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/large/adams-large.png');
+    $adams-tablet: url();
+    $nietzsche-large: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/large/nietzsche-large.png');
+    $nietzsche-tablet: url();
+    $beethoven-large: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/large/beethoven-large.png');
+    $beethoven-tablet: url();
+    // TODO: add tablet (and mobile) sized images
+
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .quote {
+        width: 75%;
+        position: relative;
+        color: white;
+        text-shadow: 1px 1px 2px #333;
+
+        p {
+            font-size: 1.3rem;
+            font-style: italic;
+            text-align: center;
+        }
+
+        span {
+            position: absolute;
+            right: 0;
+            font-style: normal;
+        }
+    }
+
+    &.einstein {
+        background-image: $einstein-large;
+    }
+
+    &.adams {
+        background-image: $adams-large;
+    }
+
+    &.nietzsche {
+        background-image: $nietzsche-large;
+    }
+
+    &.beethoven {
+        background-image: $beethoven-large;
+    }
+
+    @media screen and (max-width: 800px) {
+    }
+}
