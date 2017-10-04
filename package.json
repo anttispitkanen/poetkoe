@@ -1,6 +1,5 @@
 {
   "name": "poetkoe",
-  "homepage": "https://anttispitkanen.github.io/poetkoe",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
