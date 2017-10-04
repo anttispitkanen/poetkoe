@@ -1,0 +1,78 @@
+/* Styles for Lander */
+.Lander {
+    $large-bg: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/large/peekaboo-poetkoe.png');
+    // TODO: tablet sized bg image
+    $large-logo: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/large/poetkoe-logo-large.png');
+    $tablet-logo: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/tablet/poetkoe-logo-tablet.png');
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-color: #e1c739;
+    background-image: $large-bg;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    h1 {
+        // the actual h1 tag is hidden
+        display: none;
+    }
+
+    .some-icons {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.6rem;
+        color: white;
+
+        ul {
+            list-style-type: none;
+            padding: 10px;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+
+            li {
+                padding: 10px;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .main-logo {
+        background-image: $large-logo;
+        height: 150px;
+        width: 75%;
+        max-width: 600px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .tagline {
+        position: absolute;
+        bottom: 16vh;
+        width: 80%;
+        text-align: center;
+        h2 {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-shadow: 0 0 1px #333;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .main-logo {
+            background-image: $tablet-logo;
+        }
+    }
+}

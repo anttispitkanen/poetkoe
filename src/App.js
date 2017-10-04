@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Lander from './components/Lander';
+
 const App = () => (
     <div className="App">
-        Work in progress
+        <Lander />
     </div>
 );
 
