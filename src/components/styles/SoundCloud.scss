@@ -1,0 +1,37 @@
+/* Styles for SoundCloud */
+.SoundCloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #444;
+    padding: 0 20px;
+    margin: 30px 0;
+
+    .soundcloud {
+        max-width: 500px;
+        padding-left: 40px;
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            padding: 5px 0;
+        }
+
+        h2, p {
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 889px) {
+        .soundcloud {
+            padding: 0;
+            max-width: 750px;
+        }
+    }
+}
