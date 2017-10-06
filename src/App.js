@@ -2,8 +2,9 @@ import React from 'react';
 
 import Filler from './components/Filler';
 import Lander from './components/Lander';
-import SoundCloud from './components/SoundCloud';
 import Introduction from './components/Introduction';
+import SoundCloud from './components/SoundCloud';
+import Footer from './components/Footer';
 
 const App = () => (
     <div className="App">
@@ -30,6 +31,8 @@ const App = () => (
             textSource="beethoven.md"
             quotedPerson="beethoven"
         />
+
+        <Footer />
     </div>
 );
 

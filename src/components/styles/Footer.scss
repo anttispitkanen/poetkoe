@@ -1,0 +1,47 @@
+/* Styles for Footer */
+.Footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 100px;
+    width: 100%;
+    padding: 20px;
+    background-color: #e1c739;
+    color: white;
+
+    .some-icons {
+        ul {
+            list-style-type: none;
+            display: flex;
+            padding: 20px;
+
+            li {
+                i {
+                    font-size: 2rem;
+                    padding: 10px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        padding: 25px;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-shadow: 0 0 1px #444;
+
+        p {
+            margin: 0;
+            padding: 5px;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
