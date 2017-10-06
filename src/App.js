@@ -5,6 +5,7 @@ import Lander from './components/Lander';
 import Introduction from './components/Introduction';
 import SoundCloud from './components/SoundCloud';
 import YouTube from './components/YouTube';
+import Facebook from './components/Facebook';
 import Footer from './components/Footer';
 
 const App = () => (
@@ -31,6 +32,9 @@ const App = () => (
             textSource="nietzsche.md"
             quotedPerson="nietzsche"
         />
+
+        <Facebook />
+
         <Filler
             textSource="beethoven.md"
             quotedPerson="beethoven"
