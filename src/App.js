@@ -4,6 +4,7 @@ import Filler from './components/Filler';
 import Lander from './components/Lander';
 import Introduction from './components/Introduction';
 import SoundCloud from './components/SoundCloud';
+import YouTube from './components/YouTube';
 import Footer from './components/Footer';
 
 const App = () => (
@@ -23,6 +24,9 @@ const App = () => (
             textSource="adams.md"
             quotedPerson="adams"
         />
+
+        <YouTube />
+
         <Filler
             textSource="nietzsche.md"
             quotedPerson="nietzsche"
