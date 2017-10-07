@@ -1,7 +1,8 @@
 /* Styles for Lander */
 .Lander {
     $large-bg: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/large/peekaboo-poetkoe.png');
-    // TODO: tablet sized bg image
+    $tablet-bg: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/tablet/peekaboo-poetkoe-tablet.png');
+    $mobile-bg: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/peekaboo-poetkoe-mobile.png');
     $large-logo: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/large/poetkoe-logo-large.png');
     $tablet-logo: url('https://raw.githubusercontent.com/anttispitkanen/poetkoe-content/master/images/tablet/poetkoe-logo-tablet.png');
 
@@ -67,12 +68,18 @@
             font-size: 1.3rem;
             font-weight: 500;
             text-shadow: 0 0 1px #333;
+            font-family: 'Source Sans Pro', sans-serif;
         }
     }
 
     @media screen and (max-width: 800px) {
+        background-image: $tablet-bg;
         .main-logo {
             background-image: $tablet-logo;
         }
+    }
+
+    @media screen and (max-width: 500px) {
+        background-image: $mobile-bg;
     }
 }
