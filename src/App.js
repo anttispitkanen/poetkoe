@@ -35,11 +35,6 @@ const App = () => (
 
         <Facebook />
 
-        <Filler
-            textSource="beethoven.md"
-            quotedPerson="beethoven"
-        />
-
         <Footer />
     </div>
 );
