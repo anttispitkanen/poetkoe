@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MarkdownParser from '../MarkdownParser';
 import { videoEmbed } from '../videoEmbed';
 import './styles/Introduction.css';
