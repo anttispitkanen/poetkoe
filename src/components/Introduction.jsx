@@ -7,10 +7,10 @@ const IntroEmbed = videoEmbed({
     url: 'embeds/introduction.md',
     className: 'youtube-embed',
 }, {
-    origWidth: 560,
-    origHeight: 315,
+    origWidth: 300,
+    origHeight: 380,
     sideMargin: 20,
-    aspectRatio: 0.5625
+    aspectRatio: 1.267
 })(MarkdownParser);
 
 const Introduction = () => (
